@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan</title>
+</head>
+<body>
+    <h1>Ticket Pemesanan Panel</h1>
+    <form id="orderForm">
+        <label for="panel">Panel:</label>
+        <select id="panel">
+            <option value="Uknown">Pilih</option>
+            <option value="Panel Minecraft">Panel Mc</option>
+            <option value="Panel Bot Wa">Panel Bot Wa</option>
+        </select>
+        <br><br>
+        <label for="ram">RAM:</label>
+        <select id="ram">
+            <option value="Uknown">Pilih</option>
+            <option value="1">1GB (Bot Js)</option>
+            <option value="2">2GB (Minecraft & Bot Js)</option>
+            <option value="3">3GB (Bot Js)</option>
+            <option value="4">4GB (Minecraft & Bot Js)</option>
+            <option value="5">5GB (Bot Js)</option>
+            <option value="6">6GB (Bot Js)</option>
+            <option value="7">7GB (Bot Js)</option>
+            <option value="8">8GB (Minecraft & Bot Js)</option>
+            <option value="9">9GB (Bot Js)</option>
+            <option value="10">10GB (Bot Js)</option>
+            <option value="Unli">Unli (Bot Js)</option>
+            <option value="12">12GB (Minecraft)</option>
+            <option value="16">16GB (Minecraft)</option>
+            <option value="32">32GB (Minecraft)</option>
+            <option value="48">48GB (Minecraft)</option>
+        </select>
+        <br><br>
+        	<label for="Host">Plat:</label>
+        <select id="Host">
+            <option value="Uknown">Pilih</option>
+            <option value="Basic Hosting">Basic Hosting (Minecraft)</option>
+            <option value="Private Hosting">Private Hosting (Bot Js)</option>
+        </select>
+        <br><br>
+        <button type="button" onclick="submitForm()">Pesan Sekarang</button>
+    </form>
+
+    <script>
+        function submitForm() {
+            const panel = document.getElementById('panel').value;
+            const ram = document.getElementById('ram').value;
+            const Host = document.getElementById('Host').value;
+            const url = `https://wa.me/6285383056042?text=*HAI+AI+STORE*%0ASaya+ingin+membeli+panel%0A*Nama+Panel+:*%0A${panel}%0A*Dengan+Ram+Sebesar+:*%0A${ram}GB%0A*Dengan Plat*%0A${Host}`;
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
