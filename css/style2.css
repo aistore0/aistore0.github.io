@@ -1,0 +1,40 @@
+/* Gaya untuk logo di kiri atas */
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100px; /* Sesuaikan ukuran logo */
+}
+
+/* Gaya untuk teks penjelasan di atas tombol */
+.description {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Gaya untuk tombol belanja */
+.button-belanja {
+    display: block;
+    margin: 20px auto; /* Agar tombol berada di tengah horizontal */
+    padding: 20px 40px;
+    font-size: 24px;
+    background-color: #28a745;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-belanja:hover {
+    background-color: #218838;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 150px; /* Menambahkan jarak ke bawah dari logo */
+}

@@ -1,0 +1,120 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Banner Styles */
+.banner {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner .logo-banner {
+    width: 700px;
+    margin-right: 50pz;
+}
+
+.banner h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+}
+header {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    }
+    nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+/* Logo Styles */
+.logo {
+    width: 100px;
+    margin: 20px 0;
+}
+
+/* Hosting Plan Styles */
+.plan {
+    background-color: #1e1e1e;
+    border-radius: 40px;
+    padding: 80px;
+    margin: 40px 100;
+    width: 100%;
+    text-align: center;
+}
+
+.plan.highlight {
+    background-color: #2a2a2a;
+    border: 2px solid #6200ea;
+}
+
+.plan h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #6200ea;
+}
+.plan h1 {
+	margin: 0;
+	font-size: 2.0em;
+	color: #535353
+}
+.plan p {
+    margin: 10px 0;
+    font-size: 1em;
+}
+
+.plan .price {
+    font-size: 16px;
+    color: #00FF00;
+    margin-bottom: 10px;
+}
+.button {
+    display: inline-block;
+    padding: 20px 40px;
+    font-size: 16px;
+    color: white;
+    background: linear-gradient(20deg, #d32f2f, #C000A7);
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(#FF3FF4);
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+.button:hover {
+    background: linear-gradient(45deg, #e53935, #00F0FF);
+}
