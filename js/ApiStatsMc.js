@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <p>Status: ONLINE</p>
                 <p>Players: ${data.players.online} / ${data.players.max}</p>
                 <p>Version: ${data.version}</p>
-                <a href="ticket.html" class="Button">Join Komunitas BHC</a>
+                <a href="https://chat.whatsapp.com/HSn8b8zkKlBHJC7ki2qqwF" class="Button">Join Komunitas BHC</a>
             `;
         } else {
             statusDiv.innerHTML = `
