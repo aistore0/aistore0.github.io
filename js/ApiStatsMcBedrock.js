@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const statusDiv = document.getElementById('server-statu');
         if (stat.online) {
             statusDiv.innerHTML = `
-              <img src="image/Brutalhard.png" alt="Logo" class="logo">
+              <img src="image/brutalhard.png" alt="Logo" class="logo">
                 <h2>Server Info</h2>
                 <p>Server Description: ${stat.motd.raw}</p>
                 <p>IP: ${serverIP}</p>
