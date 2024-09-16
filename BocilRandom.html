@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOCIL RANDOM | AI STORE</title>
+        <link rel="icon" href="image/logo.png">
+    <style>
+        @font-face {
+            font-family: 'SquareFont';
+            src: url('Minecrafter.reg.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'SquareFont', Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .input-box {
+            margin: 20px 0;
+        }
+        .input-box input {
+            padding: 20px;
+            width: 70%;
+            border: none;
+            border-radius: 40px;
+            font-family: 'SquareFont', Arial, sans-serif;
+        }
+        .buttons {
+            margin: 20px 0;
+        }
+        .buttons button {
+            padding: 30px 80px;
+            margin: 5px;
+            border: none;
+            border-radius: 20px;
+            background-color: #0400FF;
+            color: #ffffff;
+            cursor: pointer;
+            font-family: 'SquareFont', Arial, sans-serif;
+        }
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>BOCIL RANDOM</h1>
+        <p>Masukin nama kamu:</p>
+        <div class="input-box">
+            <input type="text" id="nameInput" placeholder="Isi nama kamu disini - Jika Tidak diisi tidak akan Bisa">
+        </div>
+        <div class="buttons">
+            <button onclick="submitName()">Acak Sekarang</button>
+        </div>
+        <p id="errorMessage" class="error"></p>
+    </div>
+
+    <script>
+        function submitName() {
+            const name = document.getElementById('nameInput').value;
+            const errorMessage = document.getElementById('errorMessage');
+            if (name.trim() === "") {
+                errorMessage.textContent = "Nama tidak boleh kosong!";
+            } else {
+                const randomWords = ["BOCIL BOROS", "BOCIL HEBAT", "RAJA GAME", "NGEHACK PINTU SURGA","BOCIL RUSUH","BOCIL SOLEHA","BOCIL HEKER","BOCIL CULUN","BOCIL EPEP","BOCIL NGEMIS","BOCIL NGAKAK","BOCIL NANGIS","BOCIL EMEL","BOCIL GILA","BOCIL WINDAH","BOCIL ACI GAMESPORT","BOCIL CHUM KEVIN","BOCIL BEACON CREAM","BOCIL MIAW AUG","BOCIL TOXIC","BOCIL STRESS","BOCIL TOPUP","BOCIL NGEGAME","BOCIL RAJIN","BOCIL NGOCOK","BOCIL GAY","BOCIL NUDUH","BOCIL COLI","BOCIL BERCOCOK TANAM","BOCIL HARAM","BOCIL HALAL","BOCIL LEMAH IMAN","BOCIL KUAT IMAN","BOCIL PACARAN","BOCIL MAIN PETASAN","BOCIL SOK GEDE","BOCIL SOK DEWASA","BOCIL KELAS 4","BOCIL ESEMPE","BOCIL ESEMA","BOCIL GANGGUIN ORANG","BOCIL TERBAIK","ORANG TERBAIK","ORANG SOLEHA","ORANG SUKA NGOCO","ORANG BECOCOK TANAM","ORANG BUILDER","BOCIL BUILDER","BOCIL MINECRAFT"];
+                const randomWord = randomWords[Math.floor(Math.random() * randomWords.length)];
+                window.location.href = `result.html?name=${encodeURIComponent(name)}&result=${encodeURIComponent(randomWord)}`;
+            }
+        }
+    </script>
+           <nav>
+    <a href="https://t.me/alwaysFaizkuy" class="button-vertikal">
+        <img src="image/telegram.png" alt="Telegram" width="40" height="40">
+    </a>
+        <a href="https://wa.me/6285383056042" class="button-vertikal">
+        <img src="image/whatsapp.png" alt="Owner" width="40" height="40">
+    </a>
+    <a href="https://whatsapp.com/channel/0029Vakh3wsCsU9VorhDYG3J" class="button-vertikal">
+        <img src="image/whatsapp.png" alt="My Channel WhatsApp" width="40" height="40">
+    </a>
+    <a href="https://chat.whatsapp.com/BkUg4OAlwrsBKYMogWrhTi" class="button-vertikal">
+        <img src="image/whatsapp.png" alt="My Group WhatsApp" width="40" height="40">
+    </a>
+        <a href="https://youtube.com/@Faiz1123_" class="button-vertikal">
+        <img src="image/youtube.png" alt="Youtube" width="40" height="40">
+    </a>
+</nav>
+</body>
+</html>
