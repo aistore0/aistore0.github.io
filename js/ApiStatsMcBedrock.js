@@ -1,22 +1,21 @@
 document.addEventListener('DOMContentLoaded', async () => {
-    const apiURL = `https://api.mcsrvstat.us/2/${serverIP}:${Port}`;
+    const apiURL = `https://api.mcsrvstat.us/bedrock/3/${serverIP}:${Port}`;
 
     try {
         const response = await fetch(apiURL);
-        const data = await response.json();
+        const stat = await response.json();
 
-        const statusDiv = document.getElementById('server-status');
-        if (data.online) {
+        const statusDiv = document.getElementById('server-statu');
+        if (stat.online) {
             statusDiv.innerHTML = `
               <img src="image/Brutalhard.png" alt="Logo" class="logo">
                 <h2>Server Info</h2>
-                <p>Server Description: ${data.motd.clean}</p>
+                <p>Server Description: ${stat.motd.raw}</p>
                 <p>IP: ${serverIP}</p>
-                <p>Port: ${data.port}</p>
+                <p>Port: ${stat.port}</p>
                 <p>Status: ONLINE</p>
-                <p>Players: ${data.players.online} / ${data.players.max}</p>
-                <p>Version: ${data.version}</p>
-                <a href= '${JoinD}' class="Button">${Tek}</a>
+                <p>Players: ${stat.players.online} / ${stat.players.max}</p>
+                <p>Version: ${stat.version}</p>
             `;
         } else {
             statusDiv.innerHTML = `
@@ -26,6 +25,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     } catch (error) {
         console.error('Error fetching server status:', error);
-        document.getElementById('server-status').innerHTML = 'Gagal memuat status server.';
+        document.getElementById('server-statu').innerHTML = 'Gagal memuat status server.';
     }
 });
